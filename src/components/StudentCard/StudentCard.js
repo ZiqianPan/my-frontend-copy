@@ -6,8 +6,9 @@ const StudentCard = ({ expanded, onClick, student }) => {
   const { email, school, firstName, lastName, pic, grades, id, skill, latitude, longitude } =
     student;
 
-  // Converted the grades to numbers
-  const numericGrades = grades.map((grade) => Number(grade));
+  // Converted the grades to numbers/ make sure that its the score since data changed.
+  const numericGrades = grades.map((grade) => Number(grade.score));
+
 
   // Add up all the grades
   // Init total = 0
@@ -34,7 +35,7 @@ const StudentCard = ({ expanded, onClick, student }) => {
         </h1>
         <ul>
           <li>Email: {email}</li>
-          <li>school: {school} </li>
+          <li>School: {school} </li>
           <li>Skill: {skill}</li>
           <li>latitude: {latitude}</li>
           <li>longitude: {longitude}</li>
