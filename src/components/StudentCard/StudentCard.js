@@ -3,7 +3,7 @@ import { FaMinus, FaPlus } from 'react-icons/fa';
 import './StudentCard.css';
 
 const StudentCard = ({ expanded, onClick, student }) => {
-  const { email, school, firstName, lastName, pic, grades, id, skill } =
+  const { email, school, firstName, lastName, pic, grades, id, skill, latitude, longitude } =
     student;
 
   // Converted the grades to numbers
@@ -36,6 +36,8 @@ const StudentCard = ({ expanded, onClick, student }) => {
           <li>Email: {email}</li>
           <li>school: {school} </li>
           <li>Skill: {skill}</li>
+          <li>latitude: {latitude}</li>
+          <li>longitude: {longitude}</li>
           <li>Average: {average}%</li>
         </ul>
         {expanded && (
